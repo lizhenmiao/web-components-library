@@ -1,6 +1,6 @@
 # Web Components 组件库
 
-[![Deploy VitePress to GitHub Pages](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml)
+[![Deploy VuePress to GitHub Pages](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml)
 
 一个使用原生Web Component技术构建的UI组件集合，无需任何框架依赖，可以在任何现代浏览器中使用。
 
@@ -15,24 +15,30 @@
 - **轻量级** - 按需导入，不带任何多余依赖
 - **跨框架兼容** - 可与React、Vue、Angular等框架无缝集成
 
-## 安装
+## 使用方法
 
-```bash
-# 使用npm安装
-npm install my-web-components-library
+### 直接在HTML中使用
 
-# 或使用yarn
-yarn add my-web-components-library
+```html
+<!-- 在HTML中引入组件 -->
+<script src="https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js"></script>
+
+<!-- 使用组件 -->
+<modal-box title="欢迎">
+  <p>欢迎使用Web Components组件库！</p>
+</modal-box>
+
+<button onclick="document.querySelector('modal-box').open()">打开弹窗</button>
 ```
 
-## 使用
+### 在项目中导入
 
 ```javascript
-// 引入所有组件
-import 'my-web-components-library';
+// 直接从源码导入
+import './path/to/web-components-library/components/modal-box.js';
 
-// 或者按需引入
-import 'my-web-components-library/components/modal-box.js';
+// 或者使用CDN
+import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js';
 ```
 
 ## 可用组件

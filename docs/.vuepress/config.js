@@ -5,38 +5,47 @@ module.exports = {
   base: '/web-components-library/',
   // 配置文档标题
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#5c3197' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'msapplication-TileColor', content: '#5c3197' }],
+    // 预加载组件库以提高性能
+    ['link', { rel: 'preload', href: 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js', as: 'script' }],
     // 导入组件库以在文档中支持组件演示
-    ['script', { src: 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js' }]
+    ['script', { src: 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js', defer: true }]
   ],
   themeConfig: {
     // 导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: '组件', link: '/components/modal-box' },
-      { text: 'GitHub', link: 'https://github.com/lizhenmiao/web-components-library' }
+      { text: '指南', link: '/guide/' },
+      { text: '组件', link: '/components/modal-box' }
     ],
     // 侧边栏
-    sidebar: [
-      {
-        title: '介绍',
-        path: '/',
-        collapsable: false
-      },
-      {
-        title: '组件',
-        collapsable: false,
-        children: [
-          '/components/modal-box'
-        ]
-      }
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          title: '指南',
+          collapsable: false,
+          children: [
+            ''
+          ]
+        }
+      ],
+      '/components/': [
+        {
+          title: '组件',
+          collapsable: false,
+          children: [
+            'modal-box'
+          ]
+        }
+      ]
+    },
     // 社交链接
-    repo: 'https://github.com/lizhenmiao/web-components-library',
+    repo: 'lizhenmiao/web-components-library',
+    repoLabel: 'GitHub',
     // 页脚
     lastUpdated: '上次更新',
     // 贡献者
@@ -46,7 +55,7 @@ module.exports = {
     // 平滑滚动
     smoothScroll: true,
     // Logo配置
-    logo: '/images/logo.png',
+    logo: '/logo.svg',
     // 搜索配置
     search: true,
     searchMaxSuggestions: 10
@@ -64,5 +73,8 @@ module.exports = {
     }]
   ],
   // 自定义样式
-  evergreen: true
+  evergreen: true,
+  // 优化页面加载
+  cache: true,
+  shouldPrefetch: () => false
 }

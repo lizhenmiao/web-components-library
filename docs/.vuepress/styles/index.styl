@@ -11,6 +11,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+// 引入网络字体可能影响加载速度，使用本地字体代替
+// 优化图片
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 // 标题样式
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
@@ -50,6 +57,7 @@ a:hover {
   img {
     max-width: 150px;
     max-height: 150px;
+    object-fit: contain;
   }
 
   h1 {
@@ -107,7 +115,15 @@ a:hover {
       font-weight: 600;
       border-left-color: $accentColor;
       background-color: rgba($accentColor, 0.08);
+      position: relative;
+      z-index: 2;
     }
+  }
+
+  // 修复侧边栏激活项背景重叠问题
+  .sidebar-group.is-active > .sidebar-heading:not(.clickable) {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -115,10 +131,21 @@ a:hover {
 div[class*="language-"] {
   border-radius: 6px;
   margin: 1.5rem 0;
+  overflow: hidden;
 
   pre, pre[class*="language-"] {
     padding: 1.5rem;
     line-height: 1.5;
+    margin: 0;
+    overflow: auto;
+  }
+
+  code {
+    color: #fff;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 
   .highlight-lines {
@@ -126,6 +153,16 @@ div[class*="language-"] {
       background-color: rgba(255, 255, 255, 0.1);
     }
   }
+}
+
+// 内联代码样式
+:not(pre) > code {
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  font-size: 0.85em;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  word-break: break-word;
 }
 
 // 表格样式
@@ -199,4 +236,18 @@ table {
 // 返回顶部按钮
 .go-to-top {
   right: 2rem;
+}
+
+// 为演示添加的样式
+.demo-box {
+  margin: 2rem 0;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+// 优化模态框样式
+modal-box {
+  --primary-color: #5c3197;
 }
