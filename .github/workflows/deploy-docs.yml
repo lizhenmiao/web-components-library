@@ -27,11 +27,26 @@ jobs:
           node-version: 18
           cache: 'npm'
 
+      - name: Debug - List Files
+        run: |
+          echo "Listing workspace files:"
+          ls -la
+          echo "Listing docs directory:"
+          ls -la docs/
+          echo "Checking .vuepress directory:"
+          ls -la docs/.vuepress/ || echo "Directory does not exist!"
+          echo "Checking package.json:"
+          cat package.json
+
       - name: Install Dependencies
         run: npm install
 
       - name: Build VuePress Site
-        run: npm run docs:build
+        run: |
+          echo "Starting build process..."
+          npm run docs:build
+          echo "Build completed. Listing output:"
+          ls -la docs/.vuepress/dist/ || echo "Build directory not found!"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
