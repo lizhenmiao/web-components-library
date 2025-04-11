@@ -4,14 +4,27 @@
       <stop offset="0%" style="stop-color:#5c3197;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect x="20" y="35" width="160" height="130" rx="10" fill="url(#grad1)" />
 
-  <!-- U letter -->
-  <path d="M55 60 L55 110 Q55 120, 65 120 L85 120 Q95 120, 95 110 L95 60"
-        fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="80" fill="url(#grad1)" filter="url(#shadow)" />
 
-  <!-- I letter -->
-  <path d="M120 60 L150 60 M135 60 L135 120 M120 120 L150 120"
-        fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- 外环 -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.7" />
+
+  <!-- UI文字 - 现代感设计 -->
+  <g filter="url(#shadow)">
+    <!-- U字母 -->
+    <path d="M70 65 L70 110 C70 125, 85 125, 100 125 C115 125, 130 125, 130 110 L130 65"
+          fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- I字母 -->
+    <line x1="100" y1="145" x2="100" y2="145" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0" />
+
+    <!-- 点缀元素 - 设计感 -->
+    <circle cx="100" cy="145" r="5" fill="#ffffff" />
+  </g>
 </svg>

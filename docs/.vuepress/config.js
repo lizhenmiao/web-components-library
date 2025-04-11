@@ -56,7 +56,7 @@ module.exports = {
     // 平滑滚动
     smoothScroll: true,
     // Logo配置
-    logo: '/web-components-library/logo.svg',
+    logo: '/logo.svg',
     // 搜索配置
     search: true,
     searchMaxSuggestions: 10

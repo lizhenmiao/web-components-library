@@ -4,6 +4,18 @@ export default ({ Vue, options, router, siteData }) => {
   router.onReady(() => {
     // 在客户端初始化之后处理
     if (typeof window !== 'undefined') {
+      // 修复中文锚点选择器问题
+      const originalScrollBehavior = router.options.scrollBehavior;
+      if (originalScrollBehavior) {
+        router.options.scrollBehavior = async function(to, from, savedPosition) {
+          if (to.hash && to.hash.includes('%')) {
+            // 避免使用可能包含无效选择器的hash
+            return { selector: 'h2', offset: { x: 0, y: 10 } };
+          }
+          return originalScrollBehavior.call(this, to, from, savedPosition);
+        };
+      }
+
       // 全局添加函数
       window.setAnimation = function(type) {
         const modal = document.getElementById('animation-modal');
