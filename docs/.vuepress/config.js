@@ -5,6 +5,12 @@ module.exports = {
   // 设置基础路径，必须设置为仓库名才能在GitHub Pages正常工作
   base: '/web-components-library/',
 
+  // 使用默认主题
+  theme: '@vuepress/theme-default',
+
+  // 使用VuePress v2的默认打包器
+  bundler: '@vuepress/bundler-vite',
+
   themeConfig: {
     // 导航栏
     navbar: [

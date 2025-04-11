@@ -37,9 +37,15 @@ jobs:
           ls -la docs/.vuepress/ || echo "Directory does not exist!"
           echo "Checking package.json:"
           cat package.json
+          echo "Checking node_modules:"
+          ls -la node_modules/ || echo "node_modules not found!"
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          echo "Installing dependencies..."
+          npm install
+          echo "Checking installed packages:"
+          npm list --depth=0
 
       - name: Build VuePress Site
         run: |
@@ -47,6 +53,7 @@ jobs:
           npm run docs:build
           echo "Build completed. Listing output:"
           ls -la docs/.vuepress/dist/ || echo "Build directory not found!"
+          echo "Checking for any errors in the build process..."
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
