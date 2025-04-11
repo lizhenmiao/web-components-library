@@ -6,11 +6,11 @@ module.exports = {
   // 配置文档标题
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
-    ['meta', { name: 'theme-color', content: '#5c3197' }],
+    ['meta', { name: 'theme-color', content: '#007AFF' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#5c3197' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#007AFF' }],
     // 预加载组件库以提高性能
     ['link', { rel: 'preload', href: 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js', as: 'script' }],
     // 导入组件库以在文档中支持组件演示

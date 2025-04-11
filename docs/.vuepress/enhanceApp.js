@@ -16,11 +16,20 @@ export default ({ Vue, options, router, siteData }) => {
         };
       }
 
-      // 全局添加函数
+      // 旧函数保留向后兼容性
       window.setAnimation = function(type) {
+        window.setAnimationType(type, '');
+      };
+
+      // 添加新的动画类型选择器函数
+      window.setAnimationType = function(type, name) {
         const modal = document.getElementById('animation-modal');
+        const label = document.getElementById('current-animation');
         if (modal) {
           modal.setAttribute('animation', type);
+        }
+        if (label && name) {
+          label.textContent = name;
         }
       };
 
