@@ -5,9 +5,10 @@ module.exports = {
   base: '/web-components-library/',
   // 配置文档标题
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '/web-components-library/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#5c3197' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'msapplication-TileColor', content: '#5c3197' }],
     // 预加载组件库以提高性能
@@ -55,7 +56,7 @@ module.exports = {
     // 平滑滚动
     smoothScroll: true,
     // Logo配置
-    logo: '/logo.svg',
+    logo: '/web-components-library/logo.svg',
     // 搜索配置
     search: true,
     searchMaxSuggestions: 10

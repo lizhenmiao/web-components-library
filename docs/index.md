@@ -4,7 +4,7 @@
 一个使用原生Web Component技术构建的UI组件集合，无需任何框架依赖，可以在任何现代浏览器中使用。
 :::
 
-<img src="/logo.svg" alt="Web Components" style="max-width: 200px; margin: 0 auto; display: block;">
+<img src="/web-components-library/logo.svg" alt="Web Components" style="max-width: 200px; margin: 0 auto; display: block;">
 
 ## ✨ 特点
 
@@ -57,7 +57,7 @@ import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/com
     </div>
     <h2>弹窗组件</h2>
     <p>可定制的模态对话框组件</p>
-    <a href="/components/modal-box">查看文档 →</a>
+    <a href="/web-components-library/components/modal-box">查看文档 →</a>
   </div>
 
   <!-- 未来可添加更多组件 -->

@@ -1,5 +1,44 @@
 # 弹窗组件 (ModalBox)
 
+<script>
+// 在页面开头定义这些函数，确保它们在DOM元素加载前就可用
+function setAnimation(type) {
+  const modal = document.getElementById('animation-modal');
+  if (modal) {
+    modal.setAttribute('animation', type);
+  }
+}
+
+function openAnimationModal() {
+  const modal = document.getElementById('animation-modal');
+  if (modal) {
+    modal.open();
+  }
+}
+
+function configureAndOpenModal() {
+  const modal = document.getElementById('js-modal');
+  if (modal) {
+    modal.configure({
+      showHeader: true,
+      showFooter: true,
+      showCancelButton: true,
+      showConfirmButton: true,
+      closeOnEsc: true,
+      closeOnOverlay: true,
+      showCloseButton: true,
+      animation: 'scale',
+      confirmText: '确定',
+      cancelText: '取消'
+    });
+
+    modal.setTitle('使用JavaScript API');
+    modal.innerHTML = '<p>这个弹窗使用JavaScript API配置。</p>';
+    modal.open();
+  }
+}
+</script>
+
 ::: tip 组件介绍
 弹窗组件是一个可自定义的Web Component，用于创建模态对话框。它支持多种配置选项，包括自定义标题、内容、页脚，以及多种动画效果。
 :::
@@ -221,46 +260,13 @@ modal-box {
 import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js';
 ```
 
-<script>
-// 示例动画切换函数
-function setAnimation(type) {
-  const modal = document.getElementById('animation-modal');
-  modal.setAttribute('animation', type);
-}
-
-function openAnimationModal() {
-  document.getElementById('animation-modal').open();
-}
-
-// 使用JavaScript API示例
-function configureAndOpenModal() {
-  const modal = document.getElementById('js-modal');
-
-  modal.configure({
-    showHeader: true,
-    showFooter: true,
-    showCancelButton: true,
-    showConfirmButton: true,
-    closeOnEsc: true,
-    closeOnOverlay: true,
-    showCloseButton: true,
-    animation: 'scale',
-    confirmText: '确定',
-    cancelText: '取消'
-  });
-
-  modal.setTitle('使用JavaScript API');
-  modal.innerHTML = '<p>这个弹窗使用JavaScript API配置。</p>';
-  modal.open();
-}
-</script>
-
 <style>
 .demo-box {
   margin: 2rem 0;
   border: 1px solid var(--c-border);
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 
 .demo-case {

@@ -153,6 +153,20 @@ div[class*="language-"] {
       background-color: rgba(255, 255, 255, 0.1);
     }
   }
+
+  // 修复language-html元素样式
+  .language-html {
+    padding-left: 3.5rem;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: 3;
+    top: 0.8em;
+    right: 1em;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
 }
 
 // 内联代码样式
