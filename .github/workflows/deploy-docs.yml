@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '14'  # VuePress v1 需要 Node.js 14
           cache: 'npm'
 
       - name: Debug - List Files
@@ -39,6 +39,8 @@ jobs:
           cat package.json
           echo "Checking node_modules:"
           ls -la node_modules/ || echo "node_modules not found!"
+          echo "Checking Node.js version:"
+          node -v
 
       - name: Install Dependencies
         run: |

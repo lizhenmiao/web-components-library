@@ -5,15 +5,9 @@ module.exports = {
   // 设置基础路径，必须设置为仓库名才能在GitHub Pages正常工作
   base: '/web-components-library/',
 
-  // 使用默认主题
-  theme: '@vuepress/theme-default',
-
-  // 使用VuePress v2的默认打包器
-  bundler: '@vuepress/bundler-vite',
-
   themeConfig: {
     // 导航栏
-    navbar: [
+    nav: [
       { text: '首页', link: '/' },
       { text: '组件', link: '/components/modal-box' },
       { text: 'GitHub', link: 'https://github.com/yourusername/web-components-library' }
@@ -22,9 +16,10 @@ module.exports = {
     // 侧边栏
     sidebar: [
       {
-        text: '组件',
+        title: '组件',
+        collapsable: false,
         children: [
-          { text: '弹窗组件', link: '/components/modal-box' }
+          '/components/modal-box'
         ]
       }
     ],
@@ -33,11 +28,10 @@ module.exports = {
     repo: 'https://github.com/yourusername/web-components-library',
 
     // 页脚
-    lastUpdated: true,
-    contributorsText: '贡献者',
-    lastUpdatedText: '上次更新',
+    lastUpdated: '上次更新',
+    contributors: false,
 
     // 编辑链接
-    editLink: false
+    editLinks: false
   }
 }
