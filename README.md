@@ -1,12 +1,12 @@
 # Web Components 组件库
 
-[![Deploy VitePress to GitHub Pages](https://github.com/yourusername/web-components-library/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/yourusername/web-components-library/actions/workflows/deploy-docs.yml)
+[![Deploy VitePress to GitHub Pages](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/lizhenmiao/web-components-library/actions/workflows/deploy-docs.yml)
 
 一个使用原生Web Component技术构建的UI组件集合，无需任何框架依赖，可以在任何现代浏览器中使用。
 
 ## 文档
 
-访问我们的[在线文档](https://yourusername.github.io/web-components-library/)了解更多信息。
+访问我们的[在线文档](https://lizhenmiao.github.io/web-components-library/)了解更多信息。
 
 ## 特点
 
@@ -44,7 +44,7 @@ import 'my-web-components-library/components/modal-box.js';
 克隆仓库并安装依赖：
 
 ```bash
-git clone https://github.com/yourusername/web-components-library.git
+git clone https://github.com/lizhenmiao/web-components-library.git
 cd web-components-library
 npm install
 ```

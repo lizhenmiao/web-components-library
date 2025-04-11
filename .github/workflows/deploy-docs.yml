@@ -3,7 +3,7 @@ name: Deploy VitePress to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或者您的默认分支名称，如master
+      - master  # 或者您的默认分支名称，如master
 
 permissions:
   contents: read

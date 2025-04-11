@@ -10,7 +10,7 @@ export default {
     nav: [
       { text: '首页', link: '/' },
       { text: '组件', link: '/components/modal-box' },
-      { text: 'GitHub', link: 'https://github.com/yourusername/web-components-library' }
+      { text: 'GitHub', link: 'https://github.com/lizhenmiao/web-components-library' }
     ],
 
     // 侧边栏
@@ -25,7 +25,7 @@ export default {
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername/web-components-library' }
+      { icon: 'github', link: 'https://github.com/lizhenmiao/web-components-library' }
     ],
 
     // 页脚

@@ -62,8 +62,8 @@ import 'my-web-components-library/components/modal-box.js';
 
 欢迎提交问题和贡献代码：
 
-- Issue提交: [GitHub Issues](https://github.com/yourusername/my-web-components-library/issues)
-- Pull请求: [GitHub Pull Requests](https://github.com/yourusername/my-web-components-library/pulls)
+- Issue提交: [GitHub Issues](https://github.com/lizhenmiao/my-web-components-library/issues)
+- Pull请求: [GitHub Pull Requests](https://github.com/lizhenmiao/my-web-components-library/pulls)
 
 ## 许可证
 
