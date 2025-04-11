@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: '我的Web Components库',
   description: '原生Web Components组件库文档',
 
@@ -7,31 +7,31 @@ export default {
 
   themeConfig: {
     // 导航栏
-    nav: [
+    navbar: [
       { text: '首页', link: '/' },
       { text: '组件', link: '/components/modal-box' },
-      { text: 'GitHub', link: 'https://github.com/lizhenmiao/web-components-library' }
+      { text: 'GitHub', link: 'https://github.com/yourusername/web-components-library' }
     ],
 
     // 侧边栏
     sidebar: [
       {
         text: '组件',
-        items: [
-          { text: '弹窗组件', link: '/components/modal-box' },
+        children: [
+          { text: '弹窗组件', link: '/components/modal-box' }
         ]
       }
     ],
 
     // 社交链接
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/lizhenmiao/web-components-library' }
-    ],
+    repo: 'https://github.com/yourusername/web-components-library',
 
     // 页脚
-    footer: {
-      message: '基于MIT许可证发布',
-      copyright: 'Copyright © 2023'
-    }
+    lastUpdated: true,
+    contributorsText: '贡献者',
+    lastUpdatedText: '上次更新',
+
+    // 编辑链接
+    editLink: false
   }
 }

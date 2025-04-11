@@ -1,13 +1,13 @@
 {
-  "name": "my-web-components-library",
+  "name": "web-components-library",
   "version": "1.0.0",
   "description": "A library of web components built with native Web Component technology",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:preview": "vuepress preview docs"
   },
   "keywords": [
     "web-components",
@@ -15,8 +15,8 @@
     "ui-components"
   ],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.40"
+    "vuepress": "^2.0.0-rc.20"
   }
 }
