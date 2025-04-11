@@ -17,6 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "@vuepress/plugin-back-to-top": "^1.9.9",
+    "@vuepress/plugin-medium-zoom": "^1.9.9"
   }
 }
