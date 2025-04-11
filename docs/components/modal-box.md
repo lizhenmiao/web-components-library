@@ -1,10 +1,10 @@
-# 弹窗组件 (ModalBox)
+# 弹窗组件 (ModalBox) {#modal-box}
 
 ::: tip 组件介绍
 弹窗组件是一个可自定义的Web Component，用于创建模态对话框。它支持多种配置选项，包括自定义标题、内容、页脚，以及多种动画效果。
 :::
 
-## 基本用法
+## 基本用法 {#basic-usage}
 
 <div class="demo-box">
   <div class="demo-case">
@@ -23,7 +23,7 @@
   ```
 </div>
 
-## 属性
+## 属性 {#properties}
 
 | 属性名 | 类型 | 默认值 | 描述 |
 |------|-----|------|------|
@@ -41,7 +41,7 @@
 | `confirm-text` | String | 'Confirm' | 确认按钮文本 |
 | `cancel-text` | String | 'Cancel' | 取消按钮文本 |
 
-## 事件
+## 事件 {#events}
 
 | 事件名 | 描述 |
 |------|------|
@@ -50,7 +50,7 @@
 | `confirm` | 点击确认按钮时触发 |
 | `cancel` | 点击取消按钮时触发 |
 
-## 插槽
+## 插槽 {#slots}
 
 <div class="slots-box">
   <div class="slot-item">
@@ -67,7 +67,7 @@
   </div>
 </div>
 
-## 方法
+## 方法 {#methods}
 
 | 方法名 | 描述 |
 |------|------|
@@ -76,9 +76,9 @@
 | `setTitle(title)` | 设置弹窗标题 |
 | `configure(options)` | 配置弹窗，接受一个包含配置选项的对象 |
 
-## 示例
+## 示例 {#examples}
 
-### 自定义底部
+### 自定义底部 {#custom-footer}
 
 <div class="demo-box">
   <div class="demo-case">
@@ -109,7 +109,7 @@
   ```
 </div>
 
-### 使用不同的动画
+### 使用不同的动画 {#different-animations}
 
 <div class="demo-box">
   <div class="demo-case">
@@ -180,7 +180,7 @@
   ```
 </div>
 
-### 使用JavaScript API
+### 使用JavaScript API {#javascript-api}
 
 <div class="demo-box">
   <div class="demo-case">
@@ -218,7 +218,7 @@
   ```
 </div>
 
-## 自定义样式
+## 自定义样式 {#custom-styles}
 
 弹窗组件提供了多个CSS变量，可以用来自定义样式：
 
@@ -239,7 +239,7 @@ modal-box {
   <p>通过覆盖这些CSS变量，您可以轻松地自定义弹窗的外观，使其与您的应用程序风格保持一致。</p>
 </div>
 
-## 注意事项
+## 注意事项 {#notes}
 
 1. 组件使用Shadow DOM，因此外部样式默认不会影响到组件内部
 2. 如果需要使组件全局可用，请确保在页面加载时导入组件：

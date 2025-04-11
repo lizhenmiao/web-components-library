@@ -15,32 +15,26 @@ export default ({ Vue, options, router, siteData }) => {
           if (to.hash) {
             try {
               const hash = decodeURIComponent(to.hash);
-              // 先尝试使用解码后的hash查找
+
+              // 先尝试直接使用英文ID查找元素
               try {
-                const el = document.querySelector(hash);
+                // 注意：这里不使用中文ID，而是查找带有英文ID的元素
+                const el = document.querySelector(to.hash);
                 if (el) {
                   return { el, offset: { x: 0, y: 10 } };
                 }
               } catch (e) {
-                console.log('解码后的选择器无效，尝试其他方法');
+                console.log('选择器无效，尝试其他方法');
               }
 
-              // 检查是否为中文锚点，通过ID查找
+              // 通过ID属性查找
               const id = hash.startsWith('#') ? hash.substring(1) : hash;
               const elementById = document.getElementById(id);
               if (elementById) {
                 return { el: elementById, offset: { x: 0, y: 10 } };
               }
 
-              // 如果仍找不到，尝试通过文本内容查找标题元素
-              const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-              for (const heading of headings) {
-                if (heading.textContent.trim() === id) {
-                  return { el: heading, offset: { x: 0, y: 10 } };
-                }
-              }
-
-              // 如果找不到匹配的元素，回退到默认行为
+              // 回退到默认行为
               console.log('找不到匹配元素，回退到默认行为');
               return { x: 0, y: 0 };
             } catch (e) {

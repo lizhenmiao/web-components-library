@@ -1,4 +1,4 @@
-# Web Components 组件库
+# Web Components 组件库 {#web-components-library}
 
 ::: tip 简介
 一个使用原生Web Component技术构建的UI组件集合，无需任何框架依赖，可以在任何现代浏览器中使用。
@@ -6,23 +6,23 @@
 
 <img src="/web-components-library/logo.svg" alt="Web Components" style="max-width: 200px; margin: 0 auto; display: block;">
 
-## ✨ 特点
+## ✨ 特点 {#features}
 
 - 🔆 **无框架依赖** - 使用原生Web Components技术
 - 🎨 **高度可定制** - 通过属性、插槽和CSS变量轻松定制
 - 🚀 **轻量级** - 无需额外依赖，体积小，性能高
 - 🔄 **跨框架兼容** - 可与React、Vue、Angular等框架无缝集成
 
-## 🚀 快速开始
+## 🚀 快速开始 {#quick-start}
 
-### 从GitHub获取
+### 从GitHub获取 {#from-github}
 
 ```bash
 # 克隆仓库
 git clone https://github.com/lizhenmiao/web-components-library.git
 ```
 
-### 直接在HTML中使用
+### 直接在HTML中使用 {#use-in-html}
 
 ```html
 <!-- 在HTML中引入组件 -->
@@ -38,7 +38,7 @@ git clone https://github.com/lizhenmiao/web-components-library.git
 </button>
 ```
 
-### 在项目中导入
+### 在项目中导入 {#import-in-project}
 
 ```javascript
 // 直接从源码导入
@@ -48,7 +48,7 @@ import './path/to/web-components-library/components/modal-box.js';
 import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js';
 ```
 
-## 📦 可用组件
+## 📦 可用组件 {#available-components}
 
 <div class="features">
   <div class="feature">
@@ -63,7 +63,7 @@ import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/com
   <!-- 未来可添加更多组件 -->
 </div>
 
-## 💻 浏览器支持
+## 💻 浏览器支持 {#browser-support}
 
 该组件库支持所有现代浏览器，包括：
 
@@ -72,14 +72,14 @@ import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/com
 - Safari 12.1+
 - Edge 79+
 
-## 🤝 贡献
+## 🤝 贡献 {#contributing}
 
 欢迎提交问题和贡献代码：
 
 - Issue提交: [GitHub Issues](https://github.com/lizhenmiao/web-components-library/issues)
 - Pull请求: [GitHub Pull Requests](https://github.com/lizhenmiao/web-components-library/pulls)
 
-## 📄 许可证
+## 📄 许可证 {#license}
 
 MIT
 

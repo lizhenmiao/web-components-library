@@ -1,17 +1,17 @@
-# 指南
+# 指南 {#guide}
 
-## 什么是 Web Components?
+## 什么是 Web Components? {#what-is-web-components}
 
 Web Components 是一套不同的技术，允许您创建可重用的自定义元素（它们的功能封装在您的代码之外）并且在您的 web 应用中使用它们。
 
-## 特点
+## 特点 {#features}
 
 - 🔆 **无框架依赖** - 使用原生Web Components技术
 - 🎨 **高度可定制** - 通过属性、插槽和CSS变量轻松定制
 - 🚀 **轻量级** - 无需额外依赖，体积小，性能高
 - 🔄 **跨框架兼容** - 可与React、Vue、Angular等框架无缝集成
 
-## 浏览器支持
+## 浏览器支持 {#browser-support}
 
 该组件库支持所有现代浏览器，包括：
 
@@ -20,9 +20,9 @@ Web Components 是一套不同的技术，允许您创建可重用的自定义�
 - Safari 12.1+
 - Edge 79+
 
-## 快速开始
+## 快速开始 {#quick-start}
 
-### 直接在HTML中使用
+### 直接在HTML中使用 {#use-in-html}
 
 ```html
 <!-- 在HTML中引入组件 -->
@@ -38,7 +38,7 @@ Web Components 是一套不同的技术，允许您创建可重用的自定义�
 </button>
 ```
 
-### 在项目中导入
+### 在项目中导入 {#import-in-project}
 
 ```javascript
 // 直接从源码导入
@@ -48,11 +48,11 @@ import './path/to/web-components-library/components/modal-box.js';
 import 'https://cdn.jsdelivr.net/gh/lizhenmiao/web-components-library@master/components/modal-box.js';
 ```
 
-## 在框架中使用
+## 在框架中使用 {#use-in-frameworks}
 
 Web Components 是框架无关的，因此可以在任何框架中使用。
 
-### 在 Vue 中使用
+### 在 Vue 中使用 {#use-in-vue}
 
 ```vue
 <template>
@@ -83,7 +83,7 @@ export default {
 </script>
 ```
 
-### 在 React 中使用
+### 在 React 中使用 {#use-in-react}
 
 ```jsx
 import React, { useRef, useEffect } from 'react';
