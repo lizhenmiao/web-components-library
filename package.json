@@ -1,0 +1,22 @@
+{
+  "name": "my-web-components-library",
+  "version": "1.0.0",
+  "description": "A library of web components built with native Web Component technology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "web-components",
+    "custom-elements",
+    "ui-components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.40"
+  }
+}
