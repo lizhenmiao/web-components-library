@@ -209,10 +209,10 @@ class ModalBox extends HTMLElement {
     style.textContent = `
       :host {
         --primary-color: #5c3197;
-        --background-color: #f4f4f5;
+        --background-color: #ffffff;
         --text-color: #2a2a2a;
-        --border-color: #e4e4e7;
-        --button-hover: #ebebf0;
+        --border-color: #f4f5f7;
+        --button-hover: #e9eaed;
         --primary-button-hover: #4a2578;
         --animation-duration: 0.3s;
       }

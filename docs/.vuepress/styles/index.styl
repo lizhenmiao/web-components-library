@@ -1,9 +1,9 @@
 // 全局样式
 
 // 设置主色调
-$accentColor = #007AFF
-$textColor = #2c3e50
-$borderColor = #eaecef
+$accentColor = #5c3197
+$textColor = #2a2a2a
+$borderColor = #f4f5f7
 $codeBgColor = #282c34
 
 // 通用样式调整
@@ -11,7 +11,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-// 引入网络字体可能影响加载速度，使用本地字体代替
 // 优化图片
 img {
   max-width: 100%;
@@ -93,6 +92,11 @@ a:hover {
 
   .nav-links a {
     transition: color 0.2s, border-bottom-color 0.2s;
+  }
+
+  .home-link,
+  .nav-link {
+    text-decoration: none;
   }
 }
 
@@ -258,10 +262,69 @@ table {
   padding: 1.5rem;
 }
 
+// 统一按钮样式
+.demo-button,
+button:not(.custom-button):not(.go-to-top):not(.nav-link) {
+  background-color: #f4f5f7;
+  color: #2a2a2a;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.demo-button:hover,
+button:not(.custom-button):not(.go-to-top):not(.nav-link):hover {
+  background-color: #e9eaed;
+}
+
+.demo-button.primary,
+button.primary:not(.custom-button):not(.go-to-top):not(.nav-link) {
+  background-color: #5c3197;
+  color: #fff;
+  border-color: #5c3197;
+}
+
+.demo-button.primary:hover,
+button.primary:not(.custom-button):not(.go-to-top):not(.nav-link):hover {
+  background-color: #4a2578;
+  border-color: #4a2578;
+}
+
 // 优化模态框样式
 modal-box {
   --primary-color: #5c3197;
   --background-color: #ffffff;
   --text-color: #2a2a2a;
   --border-color: #f4f5f7;
+  --button-hover: #e9eaed;
+  --primary-button-hover: #4a2578;
+}
+
+// 添加单选按钮样式
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  user-select: none;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+  accent-color: #5c3197;
+}
+
+.animation-selector {
+  margin-top: 15px;
 }

@@ -4,7 +4,7 @@
 一个使用原生Web Component技术构建的UI组件集合，无需任何框架依赖，可以在任何现代浏览器中使用。
 :::
 
-<img src="/web-components-library/logo.svg" alt="Web Components" style="max-width: 200px; margin: 0 auto; display: block;">
+<img src="/logo.svg" alt="Web Components" style="max-width: 200px; margin: 0 auto; display: block;">
 
 ## ✨ 特点 {#features}
 
@@ -15,7 +15,7 @@
 
 ## 🚀 快速开始 {#quick-start}
 
-### 从GitHub获取 {#from-github}
+### 从GitHub获取 {#get-from-github}
 
 ```bash
 # 克隆仓库

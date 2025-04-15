@@ -11,15 +11,15 @@
     <modal-box id="demo-basic" title="提示">
       <p>这是一个基本的弹窗示例</p>
     </modal-box>
-    <button class="demo-button" onclick="document.getElementById('demo-basic').open()">打开弹窗</button>
+    <button class="demo-button primary" onclick="document.getElementById('demo-basic').open()">打开弹窗</button>
   </div>
 
   ```html
-  <modal-box title="提示">
-    <p>这是一个基本的弹窗示例</p>
-  </modal-box>
+    <modal-box title="提示">
+      <p>这是一个基本的弹窗示例</p>
+    </modal-box>
 
-  <button onclick="document.querySelector('modal-box').open()">打开弹窗</button>
+    <button class="primary" onclick="document.querySelector('modal-box').open()">打开弹窗</button>
   ```
 </div>
 
@@ -84,28 +84,26 @@
   <div class="demo-case">
     <modal-box id="custom-footer-modal" title="自定义底部">
       <p>这个弹窗有自定义的底部内容。</p>
-
       <div slot="footer">
         <button class="custom-button cancel" onclick="document.getElementById('custom-footer-modal').close()">关闭</button>
         <button class="custom-button confirm">提交</button>
       </div>
     </modal-box>
-    <button class="demo-button" onclick="document.getElementById('custom-footer-modal').open()">打开自定义底部弹窗</button>
+    <button class="demo-button primary" onclick="document.getElementById('custom-footer-modal').open()">打开自定义底部弹窗</button>
   </div>
 
   ```html
-  <modal-box id="custom-footer-modal" title="自定义底部">
-    <p>这个弹窗有自定义的底部内容。</p>
+    <modal-box id="custom-footer-modal" title="自定义底部">
+      <p>这个弹窗有自定义的底部内容。</p>
+      <div slot="footer">
+        <button class="custom-button cancel" onclick="document.getElementById('custom-footer-modal').close()">关闭</button>
+        <button class="custom-button confirm">提交</button>
+      </div>
+    </modal-box>
 
-    <div slot="footer">
-      <button class="custom-button cancel" onclick="document.getElementById('custom-footer-modal').close()">关闭</button>
-      <button class="custom-button confirm">提交</button>
-    </div>
-  </modal-box>
-
-  <button onclick="document.getElementById('custom-footer-modal').open()">
-    打开自定义底部弹窗
-  </button>
+    <button class="primary" onclick="document.getElementById('custom-footer-modal').open()">
+      打开自定义底部弹窗
+    </button>
   ```
 </div>
 
@@ -117,7 +115,6 @@
       <p>这个弹窗使用动态切换的动画效果。</p>
       <p>当前动画类型: <span id="current-animation">淡入淡出</span></p>
     </modal-box>
-
     <div class="animation-selector">
       <div class="radio-group">
         <label class="radio-label">
@@ -143,6 +140,7 @@
       </div>
       <button class="demo-button primary" onclick="openAnimationModal()">打开弹窗</button>
     </div>
+  </div>
 
   ```html
   <modal-box id="animation-modal" title="动画效果" animation="fade">
@@ -158,7 +156,7 @@
       <label><input type="radio" name="animation" value="slide-up">上滑</label>
       <label><input type="radio" name="animation" value="bounce">弹跳</label>
     </div>
-    <button onclick="openAnimationModal()">打开弹窗</button>
+    <button class="primary" onclick="openAnimationModal()">打开弹窗</button>
   </div>
 
   <script>
@@ -180,7 +178,7 @@
   ```
 </div>
 
-### 使用JavaScript API {#javascript-api}
+### 使用JavaScript API {#using-javascript-api}
 
 <div class="demo-box">
   <div class="demo-case">
@@ -191,7 +189,7 @@
   ```html
   <modal-box id="js-modal"></modal-box>
 
-  <button onclick="configureAndOpenModal()">使用JS API打开弹窗</button>
+  <button class="primary" onclick="configureAndOpenModal()">使用JS API打开弹窗</button>
 
   <script>
     function configureAndOpenModal() {
@@ -402,26 +400,32 @@ tr:hover {
 }
 
 .custom-button {
-  padding: 6px 12px;
+  background: none;
+  border: 1px solid;
   border-radius: 4px;
+  padding: 6px 16px;
   cursor: pointer;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
   font-size: 14px;
-  margin: 0 5px;
+  transition: all 0.3s;
 }
 
-.custom-button.confirm {
-  background-color: #5c3197;
-  color: white;
-  border: none;
+.custom-button.cancel {
+  border-color: #f4f5f7;
+  color: #2a2a2a;
 }
 
 .custom-button.cancel:hover {
-  background-color: #e0e0e0;
+  background-color: #e9eaed;
+}
+
+.custom-button.confirm {
+  border-color: #5c3197;
+  background-color: #5c3197;
+  color: white;
 }
 
 .custom-button.confirm:hover {
   background-color: #4a2578;
+  border-color: #4a2578;
 }
 </style>
