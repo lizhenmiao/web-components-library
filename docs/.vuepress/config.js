@@ -2,7 +2,7 @@ module.exports = {
   title: 'Web Components',
   description: '原生 Web Components 组件库文档',
   // 设置基础路径，必须设置为仓库名才能在GitHub Pages正常工作
-  base: '/',
+  base: '/web-components-library/',
   // 配置文档标题
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
