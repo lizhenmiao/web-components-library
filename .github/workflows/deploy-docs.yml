@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master  # 或者您的默认分支名称，如master
+  workflow_dispatch:
 
 permissions:
   contents: read
